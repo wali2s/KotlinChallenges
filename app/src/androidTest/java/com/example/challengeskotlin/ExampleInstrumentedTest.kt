@@ -1,5 +1,6 @@
 package com.example.challengeskotlin
 
+import Challenges.IsPrime
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -20,5 +21,11 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.challengeskotlin", appContext.packageName)
+    }
+
+    @Test
+    fun isPrimeTest(){
+        val test = IsPrime()
+        assert(test.isPrime(3))
     }
 }
