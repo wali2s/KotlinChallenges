@@ -5,10 +5,19 @@
       <entry key="app">
         <State />
       </entry>
-      <entry key="isPrimeTest()">
+      <entry key="testAvailbility()">
         <State />
       </entry>
-      <entry key="testPilandrom()">
+      <entry key="testBalance() (1)">
+        <State />
+      </entry>
+      <entry key="testDeposit()">
+        <State />
+      </entry>
+      <entry key="testWithdrau()">
+        <State />
+      </entry>
+      <entry key="testWithdrauOverLimit()">
         <State />
       </entry>
     </value>
