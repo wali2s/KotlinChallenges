@@ -1,10 +1,22 @@
 package LibraryManagment
 
-class Member(private val id: Int, private val name: String) {
+import android.util.Log
 
-    val borowedBooks: MutableList<Book> = mutableListOf()
+class Member(private val id: Int, private val name: String, private val library: Library) {
+
+    private val borowedBooks: MutableList<Book> = mutableListOf()
+    init {
+        library.addMember(this)
+    }
     fun borowBook(book:Book){
-        borowedBooks.add(book)
+            if(library.canBorowBook(book,this)){
+                borowedBooks.add(book)
+                library.borowCompletion(book,this)
+                book.changeAvailablitiy()
+
+            }
+
+        Log.d("borow","come later membership")
     }
 
     fun returnBook(book:Book){
